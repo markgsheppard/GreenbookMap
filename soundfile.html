@@ -10,14 +10,14 @@
             width: 400px;
             height: 100px; /* Adjust height as needed */
             margin: auto; /* Center it */
-            border: 1px solid white; /* Black border */
+            border: 1px solid #cccccc; /* Light grey border */
             background-color: white; /* White background */
         }
     </style>
 </head>
 <body>
 
-    <h1> </h1>
+    <h1>Podcast Waveform Visualization</h1>
     <div id="waveform-container"></div>
 
     <!-- Load WaveSurfer.js from CDN -->
@@ -28,7 +28,7 @@
         const wavesurfer = WaveSurfer.create({
             container: document.getElementById('waveform-container'),
             waveColor: 'rgb(0, 125, 17)',
-            progressColor: 'rgb(47, 82, 48)',
+            progressColor: 'rgb(204, 204, 204)', // Light grey progress bar
             url: 'https://markgsheppard.github.io/GreenbookMap/podcast.mp3', // Correct URL for your audio file
 
             /**
@@ -38,8 +38,8 @@
                 const { width, height } = ctx.canvas;
                 const scale = channels[0].length / width;
                 const step = 10;
-                const maxLineHeight = height * 0.1; // Shorter black progress bar
-                const squigglyHeight = height * 0.8; // Taller waveform bars
+                const maxLineHeight = height * 0.05; // Much shorter progress bar
+                const squigglyHeight = height * 0.9; // Much taller waveform lines
 
                 ctx.translate(0, height / 2);
                 ctx.strokeStyle = ctx.fillStyle;
@@ -49,7 +49,7 @@
                     const index = Math.floor(i * scale);
                     const value = Math.abs(channels[0][index]);
                     let x = i;
-                    let y = value * squigglyHeight; // Increase waveform height
+                    let y = value * squigglyHeight; // Taller waveform bars
 
                     // First half of wave
                     ctx.moveTo(x, 0);
