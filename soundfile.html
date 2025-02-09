@@ -10,14 +10,14 @@
             width: 400px;
             height: 100px; /* Adjust height as needed */
             margin: auto; /* Center it */
-            border: 1px solid #fff; /* White border */
-            background-color: black; /* Background for contrast */
+            border: 1px solid white; /* Black border */
+            background-color: white; /* White background */
         }
     </style>
 </head>
 <body>
 
-    <h1>Podcast Waveform Visualization 7</h1>
+    <h1>Podcast Waveform Visualization 27</h1>
     <div id="waveform-container"></div>
 
     <!-- Load WaveSurfer.js from CDN -->
@@ -38,7 +38,8 @@
                 const { width, height } = ctx.canvas;
                 const scale = channels[0].length / width;
                 const step = 10;
-                const maxLineHeight = height * 0.3; // Limit line height to 30% of canvas height
+                const maxLineHeight = height * 0.1; // Shorter black progress bar
+                const squigglyHeight = height * 0.8; // Taller waveform bars
 
                 ctx.translate(0, height / 2);
                 ctx.strokeStyle = ctx.fillStyle;
@@ -48,7 +49,7 @@
                     const index = Math.floor(i * scale);
                     const value = Math.abs(channels[0][index]);
                     let x = i;
-                    let y = value * maxLineHeight; // Shorter lines
+                    let y = value * squigglyHeight; // Increase waveform height
 
                     // First half of wave
                     ctx.moveTo(x, 0);
