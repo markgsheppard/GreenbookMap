@@ -1,14 +1,15 @@
-// Load WaveSurfer from the CDN
+// Ensure WaveSurfer is loaded
+import WaveSurfer from 'wavesurfer.js';
 
-// Ensure the container exists in the HTML
+// Get the waveform container from the HTML
 const container = document.getElementById('waveform-container');
 
-// Create a new WaveSurfer instance
+// Create the WaveSurfer instance
 const wavesurfer = WaveSurfer.create({
     container: container,
     waveColor: 'rgb(200, 0, 200)',
     progressColor: 'rgb(100, 0, 100)',
-    url: 'https://content.blubrry.com/econofactchats/EFChats-Trevon_LoganHistorical_Roots_of_Economic_Disparities_for_African-americans.m4a', // Your audio file
+    url: 'https://markgsheppard.github.io/GreenbookMap/podcast.mp3', // Your MP3 file
 
     /**
      * Render a waveform as a squiggly line
