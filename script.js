@@ -1,5 +1,4 @@
 // Load WaveSurfer from the CDN
-import WaveSurfer from 'wavesurfer.js';
 
 // Ensure the container exists in the HTML
 const container = document.getElementById('waveform-container');
