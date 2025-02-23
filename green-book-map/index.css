@@ -19,7 +19,7 @@
 
   --color-background: var(--color-white);
   --color-text: var(--color-gray-800);
-  --color-scrubber: var(--color-gray-400);
+  --color-scrubber: var(--color-gray-600);
   --color-scrubber-hover: var(--color-gray-700);
   --color-text-muted: var(--color-gray-600);
   --color-text-hover: var(--color-gray-950);
@@ -380,7 +380,7 @@
   position: relative;
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
-  color: var(--color-scrubber);
+  color: var(--color-base);
 }
 
 .gbm .scrubber__slider__container {
