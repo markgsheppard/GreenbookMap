@@ -8,7 +8,7 @@ import renderColorLegend from "./render-color-legend.js";
 import Choropleth from "./choropleth.js";
 
 export default function renderGreenBookMap(el) {
-  let yearIndex = years.length - 1;
+  let yearIndex = 0;
 
   const { stateFeatureCollection, countyFeatureCollection } = processData();
 
