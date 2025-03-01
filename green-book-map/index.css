@@ -19,6 +19,8 @@
 
   --color-background: var(--color-white);
   --color-text: var(--color-gray-800);
+  --color-scrubber: var(--color-gray-600);
+  --color-scrubber-hover: var(--color-gray-700);
   --color-text-muted: var(--color-gray-600);
   --color-text-hover: var(--color-gray-950);
   --color-border: var(--color-gray-400);
@@ -322,8 +324,8 @@
 /* Scrubber */
 .gbm .scrubber {
   --scrubber-width: 480px;
-  --color-base: var(--color-text);
-  --color-highlight: var(--color-text-hover);
+  --color-base: var(--color-scrubber);
+  --color-highlight: var(--color-scrubber-hover);
   --slider-track-size: var(--size-0);
   --slider-thumb-size: var(--size-4);
   --slider-thumb-active-size: var(--size-4);
@@ -332,7 +334,7 @@
   display: flex;
   gap: var(--size-2);
   align-items: center;
-  color: var(--color-text);
+  color: var(--color-scrubber);
   margin-block-start: var(--size-4);
 }
 
@@ -343,7 +345,7 @@
   text-transform: uppercase;
   white-space: nowrap;
   background-color: transparent;
-  color: var(--color-text);
+  color: var(--color-scrubber);
   border: none;
   cursor: pointer;
   padding: var(--size-1) 0;
@@ -378,6 +380,7 @@
   position: relative;
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
+  color: var(--color-base);
 }
 
 .gbm .scrubber__slider__container {
@@ -446,5 +449,5 @@
   font-size: var(--font-size-lg);
   line-height: 1;
   white-space: nowrap;
-  color: var(--color-text);
+  color: var(--color-scrubber);
 }
