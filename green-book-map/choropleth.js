@@ -34,8 +34,8 @@ export default class Choropleth {
     this.transform = d3.zoomIdentity;
 
     this.dpr = Math.min(window.devicePixelRatio, 2) || 1;
-    this.width = 858;
-    this.height = 537;
+    this.width = 975;
+    this.height = 540;
 
     this.zoom = d3.zoom().on("zoom", this.zoomed);
 
